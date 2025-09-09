@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor HTML Pro - Editor Profissional em Tempo Real</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Notification -->
+    <div id="notification" class="notification hidden"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="header-text">
+                    <h1>Editor HTML Pro</h1>
+                    <p>Editor profissional com syntax highlighting</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="badge badge-green">
+                    <i class="fas fa-bolt"></i>
+                    Tempo Real
+                </div>
+                <div class="badge badge-blue">
+                    <i class="fas fa-eye"></i>
+                    Preview Ativo
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Editor Layout -->
+        <div class="editor-layout">
+            <!-- Code Editor Section -->
+            <div class="code-section">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="fas fa-code"></i>
+                        Código HTML
+                    </div>
+                    <div class="line-count">
+                        <span id="lineCount">69 linhas</span>
+                    </div>
+                </div>
+                <div class="code-editor">
+                    <div class="line-numbers" id="lineNumbers"></div>
+                    <textarea 
+                        id="codeInput" 
+                        class="code-input"
+                        spellcheck="false"
+                        placeholder="Digite seu código HTML aqui..."
+                    ></textarea>
+                    <div class="code-highlight" id="codeHighlight"></div>
+                </div>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="fas fa-search"></i>
+                        Buscar
+                    </div>
+                </div>
+                <div class="search-content">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Digite para buscar..."
+                    >
+                    <div class="search-results" id="searchResults">
+                        <p class="search-placeholder">Digite algo para buscar no código</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button id="searchBtn" class="btn btn-blue">
+                <i class="fas fa-search"></i>
+                Buscar
+            </button>
+            <button id="copyBtn" class="btn btn-green">
+                <i class="fas fa-copy"></i>
+                Copiar
+            </button>
+            <button id="cutBtn" class="btn btn-orange">
+                <i class="fas fa-cut"></i>
+                Recortar
+            </button>
+            <button id="pasteBtn" class="btn btn-purple">
+                <i class="fas fa-paste"></i>
+                Colar
+            </button>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="preview-section">
+            <div class="section-header">
+                <div class="section-title">
+                    <i class="fas fa-play"></i>
+                    Preview em Tempo Real
+                </div>
+                <div class="badge badge-green">
+                    Atualização Automática
+                </div>
+            </div>
+            <div class="preview-container">
+                <iframe id="preview" class="preview-frame"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
